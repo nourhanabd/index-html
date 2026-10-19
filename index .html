@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAF6F0;
+            color: #60483D;
+            font-size: 18px;
+        }
+
+        header {
+            background-color: #FFFFFF;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid #E8D9CD;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 75px;
+            height: 75px;
+            border: 2px solid #D7B9A6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F8EDE5;
+            font-size: 38px;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-top: 8px;
+            color: #96796A;
+        }
+
+        button {
+            background-color: #765446;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #F7EAE0, #F1E0D3, #FAF4EC);
+            padding: 75px 4%;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .side-icons {
+            width: 150px;
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .tech-icon {
+            width: 115px;
+            height: 115px;
+            border-radius: 28px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid #E3CABB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 65px;
+            box-shadow: 0 8px 20px rgba(96, 72, 61, 0.08);
+        }
+
+        .tech-icon.small {
+            width: 85px;
+            height: 85px;
+            font-size: 48px;
+            border-radius: 22px;
+        }
+
+        .welcome-text {
+            flex: 1;
+            max-width: 650px;
+            text-align: center;
+        }
+
+        .welcome-text h1 {
+            font-size: 45px;
+            line-height: 1.4;
+            margin: 0 0 22px;
+            color: #60483D;
+        }
+
+        .welcome-text .intro {
+            font-size: 22px;
+            line-height: 1.9;
+            color: #806454;
+        }
+
+        .welcome-text .decoration {
+            color: #B68B73;
+            font-size: 30px;
+            margin-top: 25px;
+            letter-spacing: 8px;
+        }
+
+        section {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 32px;
+            background-color: #FFFFFF;
+            border: 1px solid #EDE1D7;
+            border-radius: 22px;
+            box-shadow: 0 7px 22px rgba(96, 72, 61, 0.04);
+        }
+
+        h2 {
+            color: #946D59;
+            font-size: 29px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 19px;
+            line-height: 2;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skills span {
+            background-color: #F5E8DE;
+            padding: 13px 19px;
+            border-radius: 25px;
+            font-size: 17px;
+            border: 1px solid #EAD7C9;
+        }
+
+        .project-card {
+            background-color: #FBF5EF;
+            border: 1px solid #E8D6C8;
+            border-radius: 18px;
+            padding: 22px;
+        }
+
+        .project-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            color: #765446;
+        }
+
+        .goal {
+            background-color: #F1E4D9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            background-color: #60483D;
+            color: white;
+            font-size: 16px;
+        }
+
+        [dir="rtl"] section {
+            text-align: right;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 16px;
+            }
+
+            .name {
+                font-size: 20px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+
+            .hero {
+                padding: 45px 12px;
+            }
+
+            .hero-content {
+                gap: 10px;
+            }
+
+            .side-icons {
+                width: 60px;
+                min-width: 45px;
+                gap: 18px;
+            }
+
+            .tech-icon {
+                width: 58px;
+                height: 58px;
+                font-size: 34px;
+                border-radius: 17px;
+            }
+
+            .tech-icon.small {
+                width: 45px;
+                height: 45px;
+                font-size: 27px;
+                border-radius: 14px;
+            }
+
+            .welcome-text h1 {
+                font-size: 29px;
+            }
+
+            .welcome-text .intro {
+                font-size: 17px;
+            }
+
+            .welcome-text .decoration {
+                font-size: 22px;
+                letter-spacing: 3px;
+            }
+
+            section {
+                margin: 22px 12px;
+                padding: 23px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            section p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <div class="logo">💻</div>
+
+            <div>
+                <div class="name"
+                     data-en="Nourhan Ebrahim Ahmed Ebrahim Aly"
+                     data-ar="نورهان ابراهيم احمد ابراهيم على ">
+                     Nourhan Ebrahim Ahmed Ebrahim Aly
+                </div>
+
+                <div class="subtitle"
+                     data-en="MIS Student"
+                     data-ar="طالبة نظم معلومات إدارية">
+                    MIS Student
+                </div>
+            </div>
+        </div>
+
+        <button onclick="changeLanguage()" id="languageButton">
+            العربية
+        </button>
+    </header>
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <div class="side-icons">
+                <div class="tech-icon">💻</div>
+                <div class="tech-icon small">📊</div>
+            </div>
+
+            <div class="welcome-text">
+
+                <h1
+                    data-en="Welcome to My World"
+                    data-ar="أهلًا بيكم في عالمي">
+                    Welcome to My World
+                </h1>
+
+                <p class="intro"
+                   data-en="A little space for my ideas, projects, and learning journey."
+                   data-ar="مساحة صغيرة لأفكاري ومشروعاتي ورحلتي في التعلم.">
+                    A little space for my ideas, projects, and learning journey.
+                </p>
+
+                <div class="decoration">✦ ─ ✧ ─ ✦</div>
+
+            </div>
+
+            <div class="side-icons">
+                <div class="tech-icon">🤖</div>
+                <div class="tech-icon small">🗂️</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <section>
+        <h2 data-en="About Me" data-ar="نبذة عني">
+            About Me
+        </h2>
+
+        <p
+            data-en="I enjoy learning new things, exploring technology, and turning simple ideas into creative projects."
+            data-ar="بحب أتعلم حاجات جديدة وأكتشف التكنولوجيا وأحوّل الأفكار البسيطة لمشروعات مميزة.">
+            I enjoy learning new things, exploring technology, and turning simple ideas into creative projects.
+        </p>
+    </section>
+
+    <section>
+        <h2 data-en="My Skills" data-ar="مهاراتي">
+            My Skills
+        </h2>
+
+        <div class="skills">
+            <span data-en="HTML Basics" data-ar="أساسيات HTML">
+                HTML Basics
+            </span>
+
+            <span data-en="Computer Skills" data-ar="مهارات الكمبيوتر">
+                Computer Skills
+            </span>
+
+            <span data-en="Learning & Practice" data-ar="التعلم والتطبيق">
+                Learning & Practice
+            </span>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-en="My Project" data-ar="مشروعي">
+            My Project
+        </h2>
+
+        <div class="project-card">
+            <div class="project-icon">💻 ✨</div>
+
+            <h3
+                data-en="My Personal Portfolio"
+                data-ar="موقعي الشخصي">
+                My Personal Portfolio
+            </h3>
+
+            <p
+                data-en="A beginner project where I practice building a website using HTML and CSS."
+                data-ar="مشروع تدريبي بطبّق فيه أساسيات HTML وCSS لبناء موقع شخصي.">
+                A beginner project where I practice building a website using HTML and CSS.
+            </p>
+        </div>
+    </section>
+
+    <section class="goal">
+        <h2 data-en="My Goal" data-ar="هدفي">
+            My Goal
+        </h2>
+
+        <p
+            data-en="To keep learning, improve my skills, and create beautiful and useful websites."
+            data-ar="إني أستمر في التعلم وأطوّر مهاراتي وأصمم مواقع جميلة ومفيدة.">
+            To keep learning, improve my skills, and create beautiful and useful websites.
+        </p>
+    </section>
+
+    <footer>
+        <p
+            data-en="Made with care | My Personal Portfolio"
+            data-ar="موقعي الشخصي | صُنع بكل اهتمام">
+            Made with care | My Personal Portfolio
+        </p>
+    </footer>
+
+    <script>
+        function changeLanguage() {
+            const page = document.documentElement;
+            const button = document.getElementById("languageButton");
+
+            const isEnglish = page.lang === "en";
+
+            page.lang = isEnglish ? "ar" : "en";
+            page.dir = isEnglish ? "rtl" : "ltr";
+
+            document.querySelectorAll("[data-en]").forEach(function (item) {
+                item.textContent = isEnglish
+                    ? item.dataset.ar
+                    : item.dataset.en;
+            });
+
+            button.textContent = isEnglish ? "English" : "العربية";
+        }
+    </script>
+
+</body>
+</html>
